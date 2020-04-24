@@ -70,9 +70,22 @@ class RouterCore
 				if (is_callable($get['call'])) {
 					$get['call']();
 					break;
+				} else {
+					$this->executeController($get['call']);
 				}
 			}
 		}
+	}
+
+	private function executeController ($get)
+	{
+		$ex = explode('@', $get);
+
+		if (!isset($ex[0]) || !isset($ex[1])) {
+			(new \app\controller\MessageController)->message('ss', 'ss');
+			return;
+		}
+
 	}
 
 	private function normalizeURI ($arr)
