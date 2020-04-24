@@ -1,0 +1,16 @@
+{
+    "name": "gilmar/mini-framework-mvc-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gilmar Oliveira",
+            "email": "gilmar.odp@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+    		"app\\": "app/"
+    	}
+    }
+}
